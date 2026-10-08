@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demander un devis entreprise — Tussna Academy</title>
+  <meta name="description" content="Formulaire de demande de devis pour un accompagnement IA en entreprise — Tussna Academy.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="logo"><strong>Tussna</strong> Academy</a>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="entreprises.html">Entreprises</a></li>
+          <li><a href="particuliers.html">Parcours individuels</a></li>
+          <li><a href="charte-ethique.html">Charte éthique</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="devis-entreprise.html" aria-current="page">FR</a>
+          <a href="../en/devis-entreprise.html">EN</a>
+          <a href="../ar/devis-entreprise.html">AR</a>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero section section--tight">
+    <div class="container">
+      <p class="hero__kicker">Devis — Entreprises</p>
+      <h1>Demander un devis personnalisé</h1>
+      <p class="lead" style="max-width:600px;">Quelques questions pour cadrer votre besoin. Nous revenons vers vous sous 48h avec une première proposition de périmètre.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <form class="form" action="#" method="post" style="max-width:760px;">
+        <fieldset>
+          <legend>Votre organisation</legend>
+          <div class="form-row form-row--split">
+            <div>
+              <label for="entreprise">Nom de l'entreprise</label>
+              <input type="text" id="entreprise" name="entreprise" required>
+            </div>
+            <div>
+              <label for="secteur">Secteur d'activité</label>
+              <input type="text" id="secteur" name="secteur" placeholder="Hôtellerie, industrie, services…">
+            </div>
+          </div>
+          <div class="form-row form-row--split">
+            <div>
+              <label for="taille">Taille de l'équipe concernée</label>
+              <select id="taille" name="taille">
+                <option>Moins de 15 personnes</option>
+                <option>15 à 50 personnes</option>
+                <option>50 à 200 personnes</option>
+                <option>Plus de 200 personnes</option>
+              </select>
+            </div>
+            <div>
+              <label for="ville">Ville / région</label>
+              <input type="text" id="ville" name="ville">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Votre contact</legend>
+          <div class="form-row form-row--split">
+            <div>
+              <label for="nom-ent">Nom complet</label>
+              <input type="text" id="nom-ent" name="nom" required>
+            </div>
+            <div>
+              <label for="fonction">Fonction</label>
+              <input type="text" id="fonction" name="fonction">
+            </div>
+          </div>
+          <div class="form-row form-row--split">
+            <div>
+              <label for="email-ent">E-mail professionnel</label>
+              <input type="email" id="email-ent" name="email" required>
+            </div>
+            <div>
+              <label for="tel-ent">Téléphone</label>
+              <input type="tel" id="tel-ent" name="telephone">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Votre besoin</legend>
+          <div class="form-row">
+            <label for="besoin">Quel est votre besoin prioritaire ?</label>
+            <select id="besoin" name="besoin">
+              <option>Diagnostic &amp; cadrage</option>
+              <option>Formation des équipes (catalogue)</option>
+              <option>Gouvernance &amp; conformité des données</option>
+              <option>Agent IA sur-mesure</option>
+              <option>Je ne sais pas encore, j'ai besoin d'être orienté·e</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="calendrier">Calendrier souhaité</label>
+            <select id="calendrier" name="calendrier">
+              <option>Dès que possible</option>
+              <option>Dans le mois</option>
+              <option>Dans le trimestre</option>
+              <option>Pas encore défini</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="details-ent">Précisez votre contexte</label>
+            <textarea id="details-ent" name="details" placeholder="Décrivez votre situation actuelle, vos contraintes, ce que vous avez déjà essayé…"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="checkbox-row form-row">
+          <input type="checkbox" id="consent-ent" name="consent" required>
+          <label for="consent-ent">J'accepte que mes données soient utilisées pour être recontacté·e dans le cadre de cette demande, conformément à la <a href="charte-ethique.html">charte éthique</a>.</label>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Envoyer ma demande de devis</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Tussna Academy</h4>
+          <p class="muted">Un programme Adoulim Consulting pour un usage maîtrisé et utile de l'intelligence artificielle — pour les entreprises comme pour les particuliers, au Maroc et en Afrique.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="entreprises.html">Entreprises</a></li>
+            <li><a href="particuliers.html">Parcours individuels</a></li>
+            <li><a href="charte-ethique.html">Charte éthique</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Devis</h4>
+          <ul>
+            <li><a href="devis-entreprise.html">Devis entreprise</a></li>
+            <li><a href="devis-particulier.html">Devis particulier</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@tussna-academy.com">contact@tussna-academy.com</a></li>
+            <li><a href="contact.html">Formulaire de contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Tussna Academy — un programme Adoulim Consulting. Tous droits réservés.</span>
+        <span><a href="charte-ethique.html">Confidentialité &amp; CNDP</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

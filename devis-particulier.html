@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demander un devis particulier — Tussna Academy</title>
+  <meta name="description" content="Formulaire de demande de devis pour un parcours individuel IA — Tussna Academy.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="logo"><strong>Tussna</strong> Academy</a>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="entreprises.html">Entreprises</a></li>
+          <li><a href="particuliers.html">Parcours individuels</a></li>
+          <li><a href="charte-ethique.html">Charte éthique</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="devis-particulier.html" aria-current="page">FR</a>
+          <a href="../en/devis-particulier.html">EN</a>
+          <a href="../ar/devis-particulier.html">AR</a>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero section section--tight">
+    <div class="container">
+      <p class="hero__kicker">Devis — Particuliers</p>
+      <h1>Demander un devis pour un parcours individuel</h1>
+      <p class="lead" style="max-width:600px;">Dites-nous ce que vous cherchez, nous vous recontactons avec une proposition adaptée à votre niveau et votre disponibilité.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <form class="form" action="#" method="post">
+        <fieldset>
+          <legend>Le parcours qui vous intéresse</legend>
+          <div class="form-row">
+            <label for="format">Format souhaité</label>
+            <select id="format" name="format">
+              <option value="seminaire">Séminaire fermé</option>
+              <option value="bootcamp">Weekend sprint bootcamp</option>
+              <option value="cohorte">Cohorte accompagnée</option>
+              <option value="je-ne-sais-pas">Je ne sais pas encore</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="niveau">Votre niveau actuel avec l'IA générative</label>
+            <select id="niveau" name="niveau">
+              <option>Débutant·e complet·e</option>
+              <option>Je l'utilise déjà un peu, sans méthode</option>
+              <option>Utilisateur·rice régulier·e, je veux aller plus loin</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Vos coordonnées</legend>
+          <div class="form-row form-row--split">
+            <div>
+              <label for="nom-part">Nom complet</label>
+              <input type="text" id="nom-part" name="nom" required>
+            </div>
+            <div>
+              <label for="email-part">E-mail</label>
+              <input type="email" id="email-part" name="email" required>
+            </div>
+          </div>
+          <div class="form-row form-row--split">
+            <div>
+              <label for="tel-part">Téléphone</label>
+              <input type="tel" id="tel-part" name="telephone">
+            </div>
+            <div>
+              <label for="ville-part">Ville</label>
+              <input type="text" id="ville-part" name="ville">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Votre besoin</legend>
+          <div class="form-row">
+            <label for="details-part">Qu'aimeriez-vous être capable de faire à l'issue du parcours ?</label>
+            <textarea id="details-part" name="details"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="checkbox-row form-row">
+          <input type="checkbox" id="consent-part" name="consent" required>
+          <label for="consent-part">J'accepte que mes données soient utilisées pour être recontacté·e dans le cadre de cette demande, conformément à la <a href="charte-ethique.html">charte éthique</a>.</label>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Envoyer ma demande de devis</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Pré-sélectionne le format si transmis en paramètre d'URL (depuis la page Parcours)
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var format = params.get('format');
+      if (format) {
+        var select = document.getElementById('format');
+        if (select) select.value = format;
+      }
+    })();
+  </script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Tussna Academy</h4>
+          <p class="muted">Un programme Adoulim Consulting pour un usage maîtrisé et utile de l'intelligence artificielle — pour les entreprises comme pour les particuliers, au Maroc et en Afrique.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="entreprises.html">Entreprises</a></li>
+            <li><a href="particuliers.html">Parcours individuels</a></li>
+            <li><a href="charte-ethique.html">Charte éthique</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Devis</h4>
+          <ul>
+            <li><a href="devis-entreprise.html">Devis entreprise</a></li>
+            <li><a href="devis-particulier.html">Devis particulier</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@tussna-academy.com">contact@tussna-academy.com</a></li>
+            <li><a href="contact.html">Formulaire de contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Tussna Academy — un programme Adoulim Consulting. Tous droits réservés.</span>
+        <span><a href="charte-ethique.html">Confidentialité &amp; CNDP</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
